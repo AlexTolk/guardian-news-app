@@ -10,7 +10,7 @@ function App() {
 
   const handleSearch = async (event) => {
     if (event) event.preventDefault();
-    const apiKey = '55b7f60a-4ec8-4340-91ca-a9d90a86ac05';
+    const apiKey = process.env.REACT_APP_GUARDIAN_API_KEY;
     const url = `https://content.guardianapis.com/search?q=${query}&page=${page}&api-key=${apiKey}`;
   
     try {
